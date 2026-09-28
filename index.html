@@ -102,11 +102,12 @@
 <section class="dark" id="reviews"><div class="wrap">
   <div class="head"><div><div class="kicker">Reviews</div><h2>What Brisbane and Gold Coast homeowners say.</h2></div>
     <p class="lede">Real reviews from real jobs. <span class="tc" title="Replace with MP's actual Google reviews">Sample wording shown until MP's Google reviews are dropped in.</span></p></div>
-  <div class="grid3">
+  <div class="grid3 rvwrap" id="rvwrap">
     <div class="card rv"><div class="stars">★★★★★</div><p>"Quoted on the Tuesday, installed the following week. Meyer explained exactly why a 9.87kW suited us instead of the bigger one another company pushed. First bill was a third of what it was."</p><b>Sample review, Ashgrove</b></div>
     <div class="card rv"><div class="stars">★★★★★</div><p>"Our old Queenslander still had ceramic fuses. Switchboard upgraded, safety switches in, solar on the roof, all in one visit and the price matched the written quote to the dollar."</p><b>Sample review, Paddington</b></div>
     <div class="card rv"><div class="stars">★★★★★</div><p>"Safety switch kept tripping on a Sunday night. Called, got straight advice on the phone, someone was out first thing Monday. No drama, no upsell."</p><b>Sample review, Chermside</b></div>
   </div>
+  <div class="rvdots" id="rvdots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
   <div class="rebate">
     <div><b>Rebates and finance</b><span>We confirm your eligibility for federal STCs and the <span class="tc" title="Confirm current scheme names and any finance partner with MP">Cheaper Home Batteries rebate</span> as part of the free assessment, and show the discount on your quote. Ask about pay-over-time options.</span></div>
     <a class="btn btn-sky" href="contact.html">Check my eligibility</a>
@@ -159,6 +160,6 @@
     if(!ok){f._f=0;return} f.closest('.quote').classList.add('done')})});
 })();
 </script>
-
+<script>(function(){var w=document.getElementById('rvwrap'),d=document.getElementById('rvdots');if(w&&d){var dots=d.querySelectorAll('i');w.addEventListener('scroll',function(){var i=Math.round(w.scrollLeft/(w.scrollWidth/dots.length));dots.forEach(function(x,k){x.classList.toggle('on',k===i)})},{passive:true});dots.forEach(function(x,k){x.addEventListener('click',function(){w.scrollTo({left:k*(w.scrollWidth/dots.length),behavior:'smooth'})})})}})();</script>
 </body>
 </html>

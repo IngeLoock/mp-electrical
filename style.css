@@ -119,8 +119,8 @@ html.noscroll{overflow:hidden}
 
 /* home hero */
 .hero{position:relative;color:#fff;background:var(--ink);overflow:hidden;padding-block:0}
-.hero-bg{position:absolute;inset:0;background:url(assets/hero.jpg) center/cover no-repeat;opacity:.75}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,48,.9) 0%,rgba(10,24,48,.45) 50%,rgba(10,24,48,.2) 100%),linear-gradient(0deg,var(--ink) 0%,transparent 40%)}
+.hero-bg{position:absolute;inset:0;background:url(assets/hero.jpg) center/cover no-repeat;opacity:1}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,48,.86) 0%,rgba(10,24,48,.55) 42%,rgba(10,24,48,.12) 70%,rgba(10,24,48,.05) 100%),linear-gradient(0deg,rgba(10,24,48,.85) 0%,transparent 28%)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;padding-block:clamp(4rem,8vw,7rem)}
 .hero h1 span{display:block}.hero h1 .hi{color:var(--sky)}
 .hero .lede{color:rgba(255,255,255,.78);margin:1.6rem 0 2rem}
@@ -333,11 +333,11 @@ details.faq p{color:var(--steel);padding-bottom:1.3rem;max-width:60ch}
 
 /* cta */
 .cta{position:relative;color:#fff;background:var(--ink);overflow:hidden;text-align:center}
-.cta-bg{position:absolute;inset:0;background:url(assets/cta.jpg) center/cover no-repeat;opacity:.45}
-.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.6),rgba(10,24,48,.9))}
+.cta-bg{position:absolute;inset:0;background:url(assets/cta.jpg) center/cover no-repeat;opacity:1}
+.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.35),rgba(10,24,48,.7))}
 .cta .wrap{position:relative;max-width:760px}
-.cta h2{font-size:clamp(2.4rem,6vw,4.4rem)}
-.cta p{color:rgba(255,255,255,.78);margin:1.4rem auto 2rem;max-width:52ch;font-size:1.12rem}
+.cta h2{font-size:clamp(2.4rem,6vw,4.4rem);text-shadow:0 4px 30px rgba(0,0,0,.45)}
+.cta p{color:rgba(255,255,255,.9);text-shadow:0 2px 16px rgba(0,0,0,.5);margin:1.4rem auto 2rem;max-width:52ch;font-size:1.12rem}
 .cta .actions{justify-content:center}
 
 /* footer */

@@ -71,8 +71,8 @@ header::after{content:"";position:absolute;inset:0;background:radial-gradient(60
 .burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;padding:.2rem .4rem}
 @media(max-width:1040px){.links,.nav-phone{display:none}.burger{display:flex}.phone-ic{display:inline-flex}}
 @media(max-width:520px){.nav{height:64px}.nav-cta .btn{display:none}.logo img{width:36px;height:36px}}
-.burger{width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px;padding:0 10px}
-.burger span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .2s}
+.burger{-webkit-appearance:none;appearance:none;width:44px;height:44px;min-width:44px;align-items:center;flex-direction:column;justify-content:center;gap:5px;padding:0 10px}
+.burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .2s;pointer-events:none}
 .burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 html.noscroll{overflow:hidden}
 .mobile-menu{position:fixed;inset:0;top:64px;z-index:61;background:linear-gradient(165deg,#0C1D3D 0%,#0A1830 45%,#061024 100%);color:#fff;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .28s ease,transform .28s ease,visibility 0s .28s;overflow-y:auto;-webkit-overflow-scrolling:touch}

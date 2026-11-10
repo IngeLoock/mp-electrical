@@ -452,3 +452,10 @@ footer p{opacity:.7;font-size:.93rem;max-width:34ch}
 .ba-list li span{color:var(--steel);font-size:.92rem}
 .ba-sec .ba-cap{color:var(--steel)}
 @media(max-width:900px){.ba-split{grid-template-columns:1fr;gap:1.6rem}.ba-split .ba{aspect-ratio:3/2}.ba-split .ba-copy{order:-1}}
+
+/* about hero caption */
+.phero-fig{margin:0}
+.phero-fig figcaption{display:flex;align-items:baseline;gap:.7rem;margin-top:.9rem;padding-left:.2rem}
+.phero-fig figcaption b{font-family:'Schibsted Grotesk',sans-serif;font-size:1.05rem;letter-spacing:-.01em;color:#fff}
+.phero-fig figcaption span{font-size:.85rem;color:var(--sky);font-weight:600;letter-spacing:.02em}
+@media(max-width:520px){.phero-fig figcaption{flex-direction:column;gap:.1rem}}

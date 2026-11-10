@@ -475,3 +475,23 @@ footer p{opacity:.7;font-size:.93rem;max-width:34ch}
 .rvside p{color:rgba(255,255,255,.72);font-size:.95rem;margin:.6rem 0 1.1rem}
 .rvside .btn{width:100%}
 @media(max-width:900px){.rvband .wrap{grid-template-columns:1fr;gap:1.6rem}}
+
+/* gallery carousel */
+.gal{position:relative}
+.gal-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:.3rem .3rem 1rem}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-track figure{flex:0 0 calc((100% - 2.4rem)/3);margin:0;scroll-snap-align:start;position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--ink);box-shadow:0 20px 40px -24px rgba(10,24,48,.4)}
+.gal-track img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal-track figure:hover img{transform:scale(1.03)}
+.gal-track figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1.1rem .9rem;color:#fff;font-size:.85rem;font-weight:600;background:linear-gradient(0deg,rgba(10,24,48,.85),transparent)}
+.gal-nav{display:flex;justify-content:space-between;align-items:center;margin-top:.4rem}
+.gal-dots{display:flex;gap:.5rem}
+.gal-dots i{width:8px;height:8px;border-radius:50%;background:rgba(10,24,48,.18);cursor:pointer;transition:background .2s,transform .2s}
+.gal-dots i.on{background:var(--blue);transform:scale(1.25)}
+.gal-btns{display:flex;gap:.6rem}
+.gal-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .15s}
+.gal-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}
+.gal-btn svg{width:20px;height:20px}
+.gal-btn[disabled]{opacity:.35;pointer-events:none}
+@media(max-width:900px){.gal-track figure{flex-basis:calc((100% - 1.2rem)/2)}}
+@media(max-width:600px){.gal-track{gap:.9rem;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}.gal-track figure{flex-basis:82%}}

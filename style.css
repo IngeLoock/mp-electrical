@@ -495,3 +495,5 @@ footer p{opacity:.7;font-size:.93rem;max-width:34ch}
 .gal-btn[disabled]{opacity:.35;pointer-events:none}
 @media(max-width:900px){.gal-track figure{flex-basis:calc((100% - 1.2rem)/2)}}
 @media(max-width:600px){.gal-track{gap:.9rem;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}.gal-track figure{flex-basis:82%}}
+.qf .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.qf .err{color:#D9534F;font-weight:600;margin-top:.6rem}

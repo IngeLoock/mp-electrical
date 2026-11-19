@@ -4,6 +4,21 @@
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
   }
 
+  // After a request has gone through, also add it to MP's JobForge as a new job.
+  // It goes via the site's own relay (/api/quote), which holds the JobForge key.
+  // Never blocks or changes what the visitor sees.
+  function toJobForge(f) {
+    try {
+      var v = function (n) { var el = f.elements.namedItem(n); return el && el.value ? el.value : ''; };
+      fetch('/api/quote', {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: v('name'), phone: v('phone'), email: v('email'), job: v('job'), message: v('message'), page: location.pathname })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
   // Sends a checked quote form. Called by the page's own submit handler.
   window.mpSend = function (f) {
     var box = f.closest('.quote');
@@ -22,6 +37,7 @@
       if (!j.success) throw new Error(j.message || 'send failed');
       box.classList.add('done');
       track('generate_lead', { form_location: location.pathname, job: f.job ? f.job.value : '' });
+      toJobForge(f);
     }).catch(function () {
       if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label; }
       var p = document.createElement('p');
